@@ -10,7 +10,7 @@ const Skills: React.FC = () => {
     },
     {
       title: "Frameworks & APIs",
-      skills: ["FastAPI", "Flask", "REST API Development"]
+      skills: ["FastAPI", "Flask", "REST API Development","Django"]
     },
     {
       title: "Cloud & DevOps",
