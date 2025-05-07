@@ -76,8 +76,9 @@ const Hero: React.FC = () => {
           </Button>
           
           <a 
-            href="/src/doc/resume.pdf"
-            download="Lakshay_Sharma_Resume.pdf"
+            href="https://drive.google.com/uc?export=download&id=1_GEBy_x6vv_OcnZCm3mjdkFdyqDQQzhx"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 text-lg px-8 py-4 bg-transparent hover:bg-gray-800 text-white border border-gray-600 rounded transition-all duration-300"
           >
             <FileDown size={20} />
