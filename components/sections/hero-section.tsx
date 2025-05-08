@@ -35,7 +35,7 @@ export function HeroSection() {
               Backend Developer & AI Innovator
             </h1>
             <h2 className="mt-4 text-xl md:text-2xl text-gray-400">
-              Designing scalable systems, crafting AI-powered tools, and building a future-proof tech career in Japan.
+              Designing scalable systems, crafting AI-powered tools, and building a future-proof tech career in Artifical Intelligence field.
             </h2>
           </div>
           

@@ -57,7 +57,7 @@ export function AboutSection() {
                 Skilled in backend architecture, AI integration, and cloud services. My expertise lies in building robust APIs, integrating AI models, and optimizing system performance for scalability.
               </p>
               <p>
-                Looking ahead, I'm actively learning Japanese (aiming for JLPT N3 by Dec 2025) to work in Japan's innovation ecosystem. I'm fascinated by the intersection of AI and traditional systems, creating solutions that enhance human capabilities.
+                Looking ahead, I'm fascinated by the intersection of AI and traditional systems, creating solutions that enhance human capabilities.
               </p>
               <p>
                 When I'm not coding, you'll find me exploring the latest in AI research, contributing to open-source projects, or immersing myself in Japanese language and culture.
