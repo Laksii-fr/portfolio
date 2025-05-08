@@ -45,7 +45,7 @@ export function ExperienceSection() {
     {
       company: "Tryzentt Pvt. Ltd.",
       position: "AI/ML Developer & Full Stack Intern",
-      period: "Jan 2024 - Apr 2024",
+      period: "Jun 2024 - Apr 2024",
       achievements: [
         "Built and deployed 5+ production-grade REST APIs that automated repetitive workflows in client applications, resulting in a 40% reduction in manual backend tasks.",
         "Integrated OpenAI GPT-3.5 into internal tools to generate smart suggestions, improving automation accuracy by 35% and enabling faster decision-making for users.",
