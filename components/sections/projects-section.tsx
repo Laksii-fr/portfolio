@@ -102,8 +102,7 @@ export function ProjectsSection() {
         "Upload internal documents as training data",
         "Analytics dashboard to track user queries"
       ],
-      demoUrl: "https://assistants.leoqui.ai/",
-      image: "/img/Customercare.png"
+      image: "/img/Auth Service.png"
     }
   ];
 
