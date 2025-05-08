@@ -72,7 +72,7 @@ export function ProjectsSection() {
     {
       title: "AI-Powered Test Paper Generator",
       description: "A web-based tool designed for educators to instantly generate customized test papers by specifying topics, difficulty levels, and question formats.",
-      stack: ["FastAPI", "MongoDB", "AWS"],
+      stack: ["FastAPI", "MongoDB", "AWS", "Langgraph"],
       features: [
         "Auto-generate questions based on subject & difficulty",
         "Export-ready test paper format",
@@ -85,6 +85,18 @@ export function ProjectsSection() {
       title: "Customer Care Chatbot Builder",
       description: "No-code platform to design, train, and deploy AI chatbots on company-specific data. Easy iframe or API integration supported.",
       stack: ["FastAPI", "MongoDB", "OpenAI"],
+      features: [
+        "Drag-and-drop chatbot setup",
+        "Upload internal documents as training data",
+        "Analytics dashboard to track user queries"
+      ],
+      demoUrl: "https://assistants.leoqui.ai/",
+      image: "/img/Customercare.png"
+    },
+    {
+      title: "Authentication Services",
+      description: "Designed API for authentication services, including user registration, login, OTP Confirmation, and password recovery. Integrated with third-party services for enhanced security.",
+      stack: ["FastAPI", "MongoDB", "AWS Cognito","JWT"],
       features: [
         "Drag-and-drop chatbot setup",
         "Upload internal documents as training data",
