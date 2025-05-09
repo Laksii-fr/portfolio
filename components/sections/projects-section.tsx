@@ -98,9 +98,9 @@ export function ProjectsSection() {
       description: "Designed API for authentication services, including user registration, login, OTP Confirmation, and password recovery. Integrated with third-party services for enhanced security.",
       stack: ["FastAPI", "MongoDB", "AWS Cognito","JWT"],
       features: [
-        "Drag-and-drop chatbot setup",
-        "Upload internal documents as training data",
-        "Analytics dashboard to track user queries"
+        "Microservices-based architecture",
+        "Secure user authentication and authorization",
+        "Integration with third-party services"
       ],
       image: "/img/Auth Service.png"
     }
