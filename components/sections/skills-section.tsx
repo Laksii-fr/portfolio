@@ -7,11 +7,21 @@ import { cn } from '@/lib/utils'
 import { 
   Code2, Database, Cloud, BrainCircuit,
 } from 'lucide-react'
+import { 
+  SiPython, SiCplusplus, SiJavascript, SiMongodb,
+  SiFastapi, SiFlask, SiExpress, SiDjango,
+  SiAmazon, SiGithub, SiDocker,
+  SiOpenai, SiRobotframework,
+  SiTensorflow, SiHuggingface, SiMysql
+} from 'react-icons/si'
 
 type SkillCategory = {
   title: string
   icon: React.ReactNode
-  skills: string[]
+  skills: Array<{
+    name: string
+    icon: React.ReactNode
+  }>
 }
 
 export function SkillsSection() {
@@ -43,23 +53,47 @@ export function SkillsSection() {
   const skillCategories: SkillCategory[] = [
     {
       title: "Languages & Databases",
-      icon: <Code2 className="h-5 w-5" />,
-      skills: ["Python", "C/C++", "SQL", "JavaScript", "MongoDB"]
+      icon: <Code2 className="h-6 w-6" />,
+      skills: [
+        { name: "Python", icon: <SiPython className="h-5 w-5" /> },
+        { name: "C/C++", icon: <SiCplusplus className="h-5 w-5" /> },
+        { name: "SQL", icon: <SiMysql className="h-5 w-5" /> },
+        { name: "JavaScript", icon: <SiJavascript className="h-5 w-5" /> },
+        { name: "MongoDB", icon: <SiMongodb className="h-5 w-5" /> }
+      ]
     },
     {
       title: "Frameworks & APIs",
-      icon: <Database className="h-5 w-5" />,
-      skills: ["FastAPI", "Flask", "REST API Development", "Express.js", "Django"]
+      icon: <Database className="h-6 w-6" />,
+      skills: [
+        { name: "FastAPI", icon: <SiFastapi className="h-5 w-5" /> },
+        { name: "Flask", icon: <SiFlask className="h-5 w-5" /> },
+        { name: "REST API Development", icon: <Code2 className="h-5 w-5" /> },
+        { name: "Express.js", icon: <SiExpress className="h-5 w-5" /> },
+        { name: "Django", icon: <SiDjango className="h-5 w-5" /> }
+      ]
     },
     {
       title: "Cloud & DevOps",
-      icon: <Cloud className="h-5 w-5" />,
-      skills: ["AWS (S3, EC2, Lambda)", "Azure", "Git/GitHub", "CI/CD", "Docker"]
+      icon: <Cloud className="h-6 w-6" />,
+      skills: [
+        { name: "AWS (S3, EC2, Lambda)", icon: <SiAmazon className="h-5 w-5" /> },
+        { name: "Azure", icon: <Cloud className="h-5 w-5" /> },
+        { name: "Git/GitHub", icon: <SiGithub className="h-5 w-5" /> },
+        { name: "CI/CD", icon: <Cloud className="h-5 w-5" /> },
+        { name: "Docker", icon: <SiDocker className="h-5 w-5" /> }
+      ]
     },
     {
       title: "AI & Tools",
-      icon: <BrainCircuit className="h-5 w-5" />,
-      skills: ["OpenAI API", "Azure Assistant API", "Prompt Engineering", "Generative AI", "LLM Integration"]
+      icon: <BrainCircuit className="h-6 w-6" />,
+      skills: [
+        { name: "OpenAI API", icon: <SiOpenai className="h-5 w-5" /> },
+        { name: "Azure Assistant API", icon: <Cloud className="h-5 w-5" /> },
+        { name: "Prompt Engineering", icon: <SiRobotframework className="h-5 w-5" /> },
+        { name: "Generative AI", icon: <SiTensorflow className="h-5 w-5" /> },
+        { name: "LLM Integration", icon: <SiHuggingface className="h-5 w-5" /> }
+      ]
     }
   ]
 
@@ -77,7 +111,7 @@ export function SkillsSection() {
           <div className="h-1 w-20 bg-gradient-to-r from-neutral-300 via-white to-neutral-500"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
             <Card 
               key={category.title}
@@ -87,21 +121,22 @@ export function SkillsSection() {
                 { "transition-delay-300": index % 2 === 1 }
               )}
             >
-              <CardHeader className="flex flex-row items-center gap-2 pb-2">
+              <CardHeader className="flex flex-row items-center gap-3 pb-4">
                 {category.icon}
-                <CardTitle className="text-xl font-bold text-white">
+                <CardTitle className="text-2xl font-bold text-white">
                   {category.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {category.skills.map((skill) => (
                     <Badge 
-                      key={skill} 
+                      key={skill.name} 
                       variant="outline"
-                      className="bg-gray-900/60 hover:bg-gray-800 border-gray-700 text-gray-300 hover:text-white transition-colors"
+                      className="bg-gray-900/60 hover:bg-gray-800 border-gray-700 text-gray-300 hover:text-white transition-colors flex items-center gap-2 px-4 py-2 text-base"
                     >
-                      {skill}
+                      {skill.icon}
+                      {skill.name}
                     </Badge>
                   ))}
                 </div>
