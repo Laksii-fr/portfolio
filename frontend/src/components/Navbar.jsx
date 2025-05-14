@@ -64,7 +64,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-light-100 focus:outline-none"
+            className="text-light-100 focus:outline-none bg-dark-800/90 p-2 rounded-lg border border-dark-600"
           >
             <svg
               className="w-6 h-6"
