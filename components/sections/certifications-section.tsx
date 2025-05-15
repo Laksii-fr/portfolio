@@ -48,6 +48,16 @@ export function CertificationsSection() {
       title: "Cloud Computing",
       issuer: "Google Developer Student Club",
       year: "2022"
+    },
+    {
+      title: "AI & ML",
+      issuer: "IIT Roorkee",
+      year: "2022"
+    },
+    {
+      title: "Javascript Bootcamp",
+      issuer: "Microsoft Learn Student Ambassador",
+      year: "2022"
     }
   ]
 

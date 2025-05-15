@@ -2,7 +2,13 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
+import dynamic from 'next/dynamic';
 import { cn } from '@/lib/utils';
+
+const GradientBackground = dynamic(
+  () => import('@/components/gradient-background'),
+  { ssr: false }
+);
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,6 +31,7 @@ export default function RootLayout({
       </head>
       <body className={cn('min-h-screen bg-black text-white antialiased', inter.className)}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <GradientBackground />
           {children}
         </ThemeProvider>
       </body>
