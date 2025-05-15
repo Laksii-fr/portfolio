@@ -60,7 +60,7 @@ export default function GradientBackground() {
       clearCanvas();
 
       // Create multiple overlapping gradients with different sizes and opacities for a soft glow effect
-      const createGlowEffect = (size, opacity) => {
+      const createGlowEffect = (size: number, opacity: number) => {
         const glow = ctx.createRadialGradient(
           lastMousePosition.current.x,
           lastMousePosition.current.y,
