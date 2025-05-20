@@ -63,6 +63,11 @@ export function CertificationsSection() {
       title: "Advance Python Programming",
       issuer: "Udemy",
       year: "2025"
+    },
+    {
+      title: "Global Employability Test",
+      issuer: "Wheebox ETS",
+      year: "2024"
     }
   ]
 
