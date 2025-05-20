@@ -58,6 +58,11 @@ export function CertificationsSection() {
       title: "Javascript Bootcamp",
       issuer: "Microsoft Learn Student Ambassador",
       year: "2022"
+    },
+    {
+      title: "Advance Python Programming",
+      issuer: "Udemy",
+      year: "2025"
     }
   ]
 
