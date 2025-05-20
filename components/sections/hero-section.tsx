@@ -26,7 +26,7 @@ export function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="min-h-screen flex flex-col justify-center py-20 md:py-32"
+      className="relative min-h-screen flex flex-col justify-center py-20 md:py-32"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className={`space-y-6 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
