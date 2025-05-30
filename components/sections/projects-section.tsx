@@ -1,12 +1,17 @@
 "use client"
 
 import { useEffect, useRef, useState } from 'react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { motion, useMotionValue, useSpring } from "framer-motion"
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ExternalLink } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import Image from 'next/image'
+
+const springValues = {
+  damping: 30,
+  stiffness: 100,
+  mass: 2,
+}
 
 type Project = {
   title: string
@@ -16,6 +21,178 @@ type Project = {
   demoUrl?: string
   status?: string
   image: string
+}
+
+function TiltedProjectCard({ project, index, isVisible }: { project: Project, index: number, isVisible: boolean }) {
+  const ref = useRef(null)
+  const [isHovered, setIsHovered] = useState(false)
+
+  const x = useMotionValue()
+  const y = useMotionValue()
+  const rotateX = useSpring(useMotionValue(0), springValues)
+  const rotateY = useSpring(useMotionValue(0), springValues)
+  const scale = useSpring(1, springValues)
+  const opacity = useSpring(0)
+
+  const [lastY, setLastY] = useState(0)
+
+  function handleMouse(e: React.MouseEvent) {
+    if (!ref.current) return
+
+    const rect = (ref.current as HTMLElement).getBoundingClientRect()
+    const offsetX = e.clientX - rect.left - rect.width / 2
+    const offsetY = e.clientY - rect.top - rect.height / 2
+
+    const rotationX = (offsetY / (rect.height / 2)) * -12
+    const rotationY = (offsetX / (rect.width / 2)) * 12
+
+    rotateX.set(rotationX)
+    rotateY.set(rotationY)
+
+    x.set(e.clientX - rect.left)
+    y.set(e.clientY - rect.top)
+
+    const velocityY = offsetY - lastY
+    setLastY(offsetY)
+  }
+
+  function handleMouseEnter() {
+    scale.set(1.15)
+    opacity.set(1)
+    setIsHovered(true)
+  }
+
+  function handleMouseLeave() {
+    opacity.set(0)
+    scale.set(1)
+    rotateX.set(0)
+    rotateY.set(0)
+    setIsHovered(false)
+  }
+
+  return (
+    <div
+      className={cn(
+        "transition-all duration-1000",
+        isVisible
+          ? "opacity-100 translate-y-0 scale-100"
+          : "opacity-0 translate-y-20 scale-95"
+      )}
+    >
+      <figure
+        ref={ref}
+        className={cn(
+          "relative w-full h-[500px] perspective-[800px] flex flex-col items-center justify-center transition-all duration-300",
+          isHovered ? "z-50" : "z-10"
+        )}
+        onMouseMove={handleMouse}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <motion.div
+          className="relative w-full h-full transform-gpu"
+          style={{
+            rotateX,
+            rotateY,
+            scale,
+            transformStyle: "preserve-3d"
+          }}
+        >
+          {/* Card Container */}
+          <div className="absolute inset-0 bg-black/50 border border-gray-800 rounded-lg shadow-lg hover:border-gray-700 transition-colors duration-300 backdrop-blur-sm">
+            {/* Project Image */}
+            <div className="relative h-48 w-full overflow-hidden rounded-t-lg">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Card Content */}
+            <div className="p-4 space-y-3 flex flex-col h-[calc(100%-12rem)]">
+              <h3 className="text-lg font-bold text-white">
+                {project.title}
+              </h3>
+              
+              <p className="text-gray-300 text-xs leading-relaxed flex-shrink-0">
+                {project.description}
+              </p>
+
+              {project.features && (
+                <ul className="list-disc list-inside text-gray-400 text-xs space-y-1 flex-shrink-0">
+                  {project.features.slice(0, 2).map((feature, idx) => (
+                    <li key={idx}>{feature}</li>
+                  ))}
+                </ul>
+              )}
+
+              <div className="flex flex-wrap gap-1 flex-shrink-0">
+                {project.stack.slice(0, 4).map((tech) => (
+                  <Badge
+                    key={tech}
+                    variant="outline"
+                    className="bg-gray-900/60 border-gray-700 text-gray-300 text-xs px-2 py-1"
+                  >
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+
+              {/* Action Button - Fixed at bottom */}
+              <div className="mt-auto pt-2">
+                {project.demoUrl ? (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800/50 text-xs h-8"
+                    asChild
+                  >
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1"
+                    >
+                      Live Demo
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </Button>
+                ) : (
+                  <Badge
+                    variant="outline"
+                    className="border-gray-700 bg-gray-800/50 text-gray-300 text-xs"
+                  >
+                    {project.status}
+                  </Badge>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* 3D Overlay Effect */}
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-lg pointer-events-none"
+            style={{
+              transform: "translateZ(10px)"
+            }}
+          />
+        </motion.div>
+
+        {/* Tooltip */}
+        <motion.div
+          className="pointer-events-none absolute left-0 top-0 rounded bg-white px-2 py-1 text-xs text-gray-900 z-10"
+          style={{
+            x,
+            y,
+            opacity,
+          }}
+        >
+          {project.title}
+        </motion.div>
+      </figure>
+    </div>
+  )
 }
 
 export function ProjectsSection() {
@@ -98,13 +275,13 @@ export function ProjectsSection() {
       description: "Designed API for authentication services, including user registration, login, OTP Confirmation, and password recovery. Integrated with third-party services for enhanced security.",
       stack: ["FastAPI", "MongoDB", "AWS Cognito","JWT"],
       features: [
-        "Microservices-based architecture",
-        "Secure user authentication and authorization",
-        "Integration with third-party services"
+        "Secure user registration and login",
+        "OTP-based verification system",
+        "Password recovery and management"
       ],
       image: "/img/Auth Service.png"
     }
-  ];
+  ]
 
   return (
     <section id="projects" className="py-20">
@@ -116,87 +293,24 @@ export function ProjectsSection() {
           <div className="h-1 w-20 bg-gradient-to-r from-neutral-300 via-white to-neutral-500" />
         </div>
 
-        <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={project.title}
               ref={el => projectRefs.current[index] = el}
-              className={cn(
-                "transition-all duration-1000",
-                visibleProjects.includes(index)
-                  ? "opacity-100 translate-y-0 scale-100"
-                  : "opacity-0 translate-y-20 scale-95"
-              )}
             >
-              <Card className="border border-gray-800 bg-black/50 shadow-md hover:shadow-lg hover:border-gray-700 transition-all duration-500">
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover rounded-t-lg"
-                  />
-                </div>
-
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-xl font-bold text-white">
-                    {project.title}
-                  </CardTitle>
-                </CardHeader>
-
-                <CardContent className="space-y-4">
-                  <p className="text-gray-300">{project.description}</p>
-
-                  {project.features && (
-                    <ul className="list-disc list-inside text-gray-400 text-sm space-y-1">
-                      {project.features.map((feature, idx) => (
-                        <li key={idx}>{feature}</li>
-                      ))}
-                    </ul>
-                  )}
-
-                  <div className="flex flex-wrap gap-2 pt-2">
-                    {project.stack.map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="outline"
-                        className="bg-gray-900/60 border-gray-700 text-gray-300"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-
-                <CardFooter>
-                  {project.demoUrl ? (
-                    <Button
-                      variant="outline"
-                      className="border-gray-700 text-gray-300 hover:text-white"
-                      asChild
-                    >
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
-                      >
-                        Live Demo
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    </Button>
-                  ) : (
-                    <Badge
-                      variant="outline"
-                      className="border-gray-700 bg-gray-800/50 text-gray-300"
-                    >
-                      {project.status}
-                    </Badge>
-                  )}
-                </CardFooter>
-              </Card>
+              <TiltedProjectCard 
+                project={project} 
+                index={index} 
+                isVisible={visibleProjects.includes(index)}
+              />
             </div>
           ))}
+        </div>
+
+        {/* Mobile Warning */}
+        <div className="block sm:hidden text-center text-gray-400 text-sm">
+          For the best experience, view on desktop to see the 3D tilt effects.
         </div>
       </div>
     </section>
