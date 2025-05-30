@@ -27,8 +27,8 @@ function TiltedProjectCard({ project, index, isVisible }: { project: Project, in
   const ref = useRef(null)
   const [isHovered, setIsHovered] = useState(false)
 
-  const x = useMotionValue()
-  const y = useMotionValue()
+  const x = useMotionValue(0)
+  const y = useMotionValue(0)
   const rotateX = useSpring(useMotionValue(0), springValues)
   const rotateY = useSpring(useMotionValue(0), springValues)
   const scale = useSpring(1, springValues)
