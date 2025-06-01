@@ -19,6 +19,7 @@ type Project = {
   stack: string[]
   features?: string[]
   demoUrl?: string
+  githubUrl?: string
   status?: string
   image: string
 }
@@ -115,13 +116,13 @@ function TiltedProjectCard({ project, index, isVisible }: { project: Project, in
                 {project.title}
               </h3>
               
-              <p className="text-gray-300 text-xs leading-relaxed flex-shrink-0">
+              <p className="text-gray-300 text-xs leading-relaxed overflow-y-auto">
                 {project.description}
               </p>
-
+              
               {project.features && (
                 <ul className="list-disc list-inside text-gray-400 text-xs space-y-1 flex-shrink-0">
-                  {project.features.slice(0, 2).map((feature, idx) => (
+                  {project.features.slice(0, 3).map((feature, idx) => (
                     <li key={idx}>{feature}</li>
                   ))}
                 </ul>
@@ -140,8 +141,8 @@ function TiltedProjectCard({ project, index, isVisible }: { project: Project, in
               </div>
 
               {/* Action Button - Fixed at bottom */}
-              <div className="mt-auto pt-2">
-                {project.demoUrl ? (
+              <div className="mt-auto pt-2 flex gap-2">
+                {project.demoUrl && (
                   <Button
                     variant="outline"
                     size="sm"
@@ -158,7 +159,26 @@ function TiltedProjectCard({ project, index, isVisible }: { project: Project, in
                       <ExternalLink className="h-3 w-3" />
                     </a>
                   </Button>
-                ) : (
+                )}
+                {project.githubUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800/50 text-xs h-8"
+                    asChild
+                  >
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1"
+                    >
+                      GitHub
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </Button>
+                )}
+                {!project.demoUrl && project.status && (
                   <Badge
                     variant="outline"
                     className="border-gray-700 bg-gray-800/50 text-gray-300 text-xs"
@@ -231,7 +251,8 @@ export function ProjectsSection() {
         "GPT-based reply suggestions",
         "Smart draft generation for agents"
       ],
-      status: "In production, launching June 2025",
+      status: "In production, launching July 2025",
+      githubUrl: "https://github.com/Laksii-fr/NeuraMail-API.git",
       image: "/img/Neuramail.png"
     },
     {
@@ -279,7 +300,21 @@ export function ProjectsSection() {
         "OTP-based verification system",
         "Password recovery and management"
       ],
+      githubUrl: "https://github.com/Laksii-fr/Authentication-Services.git",
       image: "/img/Auth Service.png"
+    },
+    {
+      title: "AI Powered Web Scraper",
+      description: "A versatile web scraping tool that uses AI to extract structured data from websites, enabling users to gather insights and automate data collection.",
+      stack: ["FastAPI", "MongoDB", "AWS Cognito", "BeautifulSoup", "Selenium", "CrewAI", "Multi Agent System"],
+      features: [
+        "AI-driven data extraction",
+        "Supports multiple websites and formats",
+        "Automated Sub links scraping and data storage",
+        "Provides structured data output"
+      ],
+      githubUrl: "https://github.com/Laksii-fr/AI-Web-Scraper.git",
+      image: "/img/AI Web Scraper.png"
     }
   ]
 

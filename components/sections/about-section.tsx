@@ -51,7 +51,7 @@ export function AboutSection() {
           <CardContent className="p-6 md:p-8">
             <div className="space-y-6 text-gray-300 text-lg">
               <p>
-                A passionate backend developer currently pursuing a B.Tech in IT at Jaypee Institute of Information Technology (Class of 2026). 
+                A passionate Full Stack developer currently pursuing a B.Tech in CSE at Jaypee Institute of Information Technology (Class of 2026). 
               </p>
               <p>
                 Skilled in backend architecture, AI integration, and cloud services. My expertise lies in building robust APIs, integrating AI models, and optimizing system performance for scalability.
