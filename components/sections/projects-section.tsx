@@ -315,6 +315,46 @@ export function ProjectsSection() {
       ],
       githubUrl: "https://github.com/Laksii-fr/AI-Web-Scraper.git",
       image: "/img/AI Web Scraper.png"
+    },
+    {
+      title: "Dev Connect",
+      description: "A platform for developers to connect with each other and share their projects, Achievements, and skills. It's a social platform where developers can share their projects, startup ideas and get feedback from other developers.",
+      stack: ["Express", "MongoDB", "JWT Auth", "CrewAI", "Multi Agent System"],
+      features: [
+        "User Authentication",
+        "User can share their projects, startup ideas and get feedback from other developers",
+        "User can follow other developers and see their projects and achievements",
+        "User can comment on other developers' projects and ideas",
+      ],
+      githubUrl: "https://github.com/Laksii-fr/Dev-Connect-API.git",
+      image: "/img/DevConnect.png"
+    },
+    {
+      title: "Personal Portfolio",
+      description: "My personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion.",
+      stack: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      features: [
+        "Responsive design",
+        "Smooth animations",
+        "Easy to maintain",
+      ],
+      githubUrl: "https://github.com/Laksii-fr/portfolio",
+      demoUrl: "https://lakshay-sharma-dev.netlify.app/",
+      image: "/img/Portfolio.png"
+    },
+    {
+      title: "Rail-Madad-SIH-Backend ",
+      description: "A AI Powered backend for a platform that helps railway passengers in case of emergencies. It provides a centralized system for passengers to report emergencies and get help from the railway authorities.",
+      stack: ["FastAPI", "MongoDB", "AWS", "Langchain", "CrewAI", "Multi Agent System"],
+      features: [
+        "AI-Powered Complaint Management",
+        "Automated Multimedia Analysis",
+        "Urgency Detection",
+        "Real-Time Status Updates",
+        "Smart Routing"
+      ],
+      githubUrl: "https://github.com/Laksii-fr/Rail-Madad-SIH-Backend.git",
+      image: "/img/RailMadad.png"
     }
   ]
 
