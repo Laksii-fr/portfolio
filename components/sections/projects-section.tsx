@@ -268,18 +268,6 @@ export function ProjectsSection() {
       image: "/img/Agnets.png"
     },
     {
-      title: "AI-Powered Test Paper Generator",
-      description: "A web-based tool designed for educators to instantly generate customized test papers by specifying topics, difficulty levels, and question formats.",
-      stack: ["FastAPI", "MongoDB", "AWS", "Langgraph"],
-      features: [
-        "Auto-generate questions based on subject & difficulty",
-        "Export-ready test paper format",
-        "Reduces manual workload by over 60%"
-      ],
-      demoUrl: "https://avatar.mashmari.in/",
-      image: "/img/Testpaper.png"
-    },
-    {
       title: "Customer Care Chatbot Builder",
       description: "No-code platform to design, train, and deploy AI chatbots on company-specific data. Easy iframe or API integration supported.",
       stack: ["FastAPI", "MongoDB", "OpenAI"],
@@ -290,6 +278,18 @@ export function ProjectsSection() {
       ],
       demoUrl: "https://assistants.leoqui.ai/",
       image: "/img/Customercare.png"
+    },
+    {
+      title: "AI-Powered Test Paper Generator",
+      description: "A web-based tool designed for educators to instantly generate customized test papers by specifying topics, difficulty levels, and question formats.",
+      stack: ["FastAPI", "MongoDB", "AWS", "Langgraph"],
+      features: [
+        "Auto-generate questions based on subject & difficulty",
+        "Export-ready test paper format",
+        "Reduces manual workload by over 60%"
+      ],
+      demoUrl: "https://avatar.mashmari.in/",
+      image: "/img/Testpaper.png"
     },
     {
       title: "Authentication Services",
