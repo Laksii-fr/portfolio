@@ -32,7 +32,7 @@ export function HeroSection() {
         <div className={`space-y-6 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-neutral-300 via-white to-neutral-500">
-              Full Stack Developer & AI Innovator
+              Backend Developer & AI Innovator
             </h1>
             <h2 className="mt-4 text-xl md:text-2xl text-gray-400">
               Designing scalable systems, crafting AI-powered tools, and building a future-proof tech career in Japan.
