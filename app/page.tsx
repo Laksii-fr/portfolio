@@ -1,3 +1,4 @@
+"use client";
 import { Navigation } from '@/components/navigation';
 import { HeroSection } from '@/components/sections/hero-section';
 import { AboutSection } from '@/components/sections/about-section';
@@ -8,8 +9,13 @@ import { CertificationsSection } from '@/components/sections/certifications-sect
 import TerminalSection from '@/components/sections/terminal';
 import { ContactSection } from '@/components/sections/contact-section';
 import { Footer } from '@/components/footer';
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center">
       <Navigation />
