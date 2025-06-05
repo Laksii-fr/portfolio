@@ -21,6 +21,7 @@ type SkillCategory = {
   skills: Array<{
     name: string
     icon: React.ReactNode
+    color?: string
   }>
 }
 
@@ -55,44 +56,44 @@ export function SkillsSection() {
       title: "Languages & Databases",
       icon: <Code2 className="h-6 w-6" />,
       skills: [
-        { name: "Python", icon: <SiPython className="h-5 w-5" /> },
-        { name: "C/C++", icon: <SiCplusplus className="h-5 w-5" /> },
-        { name: "SQL", icon: <SiMysql className="h-5 w-5" /> },
-        { name: "JavaScript", icon: <SiJavascript className="h-5 w-5" /> },
-        { name: "MongoDB", icon: <SiMongodb className="h-5 w-5" /> }
+        { name: "Python", icon: <SiPython className="h-5 w-5" style={{ color: '#3776AB' }} /> },
+        { name: "C/C++", icon: <SiCplusplus className="h-5 w-5" style={{ color: '#00599C' }} /> },
+        { name: "SQL", icon: <SiMysql className="h-5 w-5" style={{ color: '#4479A1' }} /> },
+        { name: "JavaScript", icon: <SiJavascript className="h-5 w-5" style={{ color: '#F7DF1E' }} /> },
+        { name: "MongoDB", icon: <SiMongodb className="h-5 w-5" style={{ color: '#47A248' }} /> }
       ]
     },
     {
       title: "Frameworks & APIs",
       icon: <Database className="h-6 w-6" />,
       skills: [
-        { name: "FastAPI", icon: <SiFastapi className="h-5 w-5" /> },
-        { name: "Flask", icon: <SiFlask className="h-5 w-5" /> },
-        { name: "REST API Development", icon: <Code2 className="h-5 w-5" /> },
-        { name: "Express.js", icon: <SiExpress className="h-5 w-5" /> },
-        { name: "Django", icon: <SiDjango className="h-5 w-5" /> }
+        { name: "FastAPI", icon: <SiFastapi className="h-5 w-5" style={{ color: '#009688' }} /> },
+        { name: "Flask", icon: <SiFlask className="h-5 w-5" style={{ color: '#000000' }} /> },
+        { name: "REST API Development", icon: <Code2 className="h-5 w-5" style={{ color: '#61DAFB' }} /> },
+        { name: "Express.js", icon: <SiExpress className="h-5 w-5" style={{ color: '#000000' }} /> },
+        { name: "Django", icon: <SiDjango className="h-5 w-5" style={{ color: '#092E20' }} /> }
       ]
     },
     {
       title: "Cloud & DevOps",
       icon: <Cloud className="h-6 w-6" />,
       skills: [
-        { name: "AWS (S3, EC2, Lambda)", icon: <SiAmazon className="h-5 w-5" /> },
-        { name: "Azure", icon: <Cloud className="h-5 w-5" /> },
-        { name: "Git/GitHub", icon: <SiGithub className="h-5 w-5" /> },
-        { name: "CI/CD", icon: <Cloud className="h-5 w-5" /> },
-        { name: "Docker", icon: <SiDocker className="h-5 w-5" /> }
+        { name: "AWS (S3, EC2, Lambda)", icon: <SiAmazon className="h-5 w-5" style={{ color: '#FF9900' }} /> },
+        { name: "Azure", icon: <Cloud className="h-5 w-5" style={{ color: '#0078D4' }} /> },
+        { name: "Git/GitHub", icon: <SiGithub className="h-5 w-5" style={{ color: '#181717' }} /> },
+        { name: "CI/CD", icon: <Cloud className="h-5 w-5" style={{ color: '#2496ED' }} /> },
+        { name: "Docker", icon: <SiDocker className="h-5 w-5" style={{ color: '#2496ED' }} /> }
       ]
     },
     {
       title: "AI & Tools",
       icon: <BrainCircuit className="h-6 w-6" />,
       skills: [
-        { name: "OpenAI API", icon: <SiOpenai className="h-5 w-5" /> },
-        { name: "Azure Assistant API", icon: <Cloud className="h-5 w-5" /> },
-        { name: "Prompt Engineering", icon: <SiRobotframework className="h-5 w-5" /> },
-        { name: "Generative AI", icon: <SiTensorflow className="h-5 w-5" /> },
-        { name: "LLM Integration", icon: <SiHuggingface className="h-5 w-5" /> }
+        { name: "OpenAI API", icon: <SiOpenai className="h-5 w-5" style={{ color: '#412991' }} /> },
+        { name: "Azure Assistant API", icon: <Cloud className="h-5 w-5" style={{ color: '#0078D4' }} /> },
+        { name: "Prompt Engineering", icon: <SiRobotframework className="h-5 w-5" style={{ color: '#000000' }} /> },
+        { name: "Generative AI", icon: <SiTensorflow className="h-5 w-5" style={{ color: '#FF6F00' }} /> },
+        { name: "LLM Integration", icon: <SiHuggingface className="h-5 w-5" style={{ color: '#FF6F00' }} /> }
       ]
     }
   ]
