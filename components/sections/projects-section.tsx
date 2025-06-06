@@ -317,19 +317,6 @@ export function ProjectsSection() {
       image: "/img/AI Web Scraper.png"
     },
     {
-      title: "Dev Connect",
-      description: "A platform for developers to connect with each other and share their projects, Achievements, and skills. It's a social platform where developers can share their projects, startup ideas and get feedback from other developers.",
-      stack: ["Express", "MongoDB", "JWT Auth", "CrewAI", "Multi Agent System"],
-      features: [
-        "User Authentication",
-        "User can share their projects, startup ideas and get feedback from other developers",
-        "User can follow other developers and see their projects and achievements",
-        "User can comment on other developers' projects and ideas",
-      ],
-      githubUrl: "https://github.com/Laksii-fr/Dev-Connect-API.git",
-      image: "/img/DevConnect.png"
-    },
-    {
       title: "Personal Portfolio",
       description: "My personal portfolio website built with Next.js, Tailwind CSS, and Framer Motion.",
       stack: ["Next.js", "Tailwind CSS", "Framer Motion"],
