@@ -44,8 +44,8 @@ function TiltedProjectCard({ project, index, isVisible }: { project: Project, in
     const offsetX = e.clientX - rect.left - rect.width / 2
     const offsetY = e.clientY - rect.top - rect.height / 2
 
-    const rotationX = (offsetY / (rect.height / 2)) * -50
-    const rotationY = (offsetX / (rect.width / 2)) * 50
+    const rotationX = (offsetY / (rect.height / 2)) * -30
+    const rotationY = (offsetX / (rect.width / 2)) * 30
 
     rotateX.set(rotationX)
     rotateY.set(rotationY)
