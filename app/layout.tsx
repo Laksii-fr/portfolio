@@ -13,7 +13,7 @@ const GradientBackground = dynamic(
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Lakshay Sharma | Backend Developer & AI Innovator',
+  title: 'Lakshay Sharma | Full Stack Developer & AI Innovator',
   description: 'Designing scalable systems, crafting AI-powered tools, and building a future-proof tech career in Japan.',
 };
 
