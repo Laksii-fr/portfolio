@@ -268,7 +268,7 @@ export function ProjectsSection() {
       image: "/img/Agnets.png"
     },
     {
-      title: "Customer Care Chatbot Builder",
+      title: "Tryzentt - No/Low Code AI Chatbot Builder",
       description: "No-code platform to design, train, and deploy AI chatbots on company-specific data. Easy iframe or API integration supported.",
       stack: ["FastAPI", "MongoDB", "OpenAI"],
       features: [
@@ -276,7 +276,7 @@ export function ProjectsSection() {
         "Upload internal documents as training data",
         "Analytics dashboard to track user queries"
       ],
-      demoUrl: "https://assistants.leoqui.ai/",
+      demoUrl: "https://assistants.tryzent.com/",
       image: "/img/Customercare.png"
     },
     {
