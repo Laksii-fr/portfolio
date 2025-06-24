@@ -1,27 +1,36 @@
-# Lakshay Sharma's Portfolio
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Welcome to my personal portfolio! I'm **Lakshay Sharma**, a Backend Developer & AI Innovator. This website showcases my skills, experience, and projects in the field of backend development and AI.
+## Getting Started
 
-## 🛠️ Technical Skills
+First, run the development server:
 
-- **Languages & Databases**: Python, C/C++, SQL, JavaScript, MongoDB
-- **Frameworks & Tools**: FastAPI, Flask, REST API, AWS, Azure
-- **AI & Tools**: OpenAI, Microsoft Azure Assistant API, Generative AI
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## 🚀 Featured Projects
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1. **AI-Powered Test Paper Generator**: A platform to generate customized test papers for educators.
-2. **Customer Care Chatbot Builder**: A no-code platform for building AI-powered chatbots.
-3. **NeuraMail – AI Email Assistant**: A web app that automates email processing with AI.
-4. **AI Agents Portal**: A platform to manage and track usage of AI agents.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 📫 Contact Me
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-- Email: [Lakshyash5@gmail.com](mailto:Lakshyash5@gmail.com)
-- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/lakshay-sharma2653/)
-- GitHub: [GitHub Profile](https://github.com/Laksii-fr)
+## Learn More
 
-## 🔗 Visit My Portfolio
+To learn more about Next.js, take a look at the following resources:
 
-You can explore my full portfolio website here: [Lakshay Sharma Portfolio](lakshay-sharma-dev.netlify.app)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
