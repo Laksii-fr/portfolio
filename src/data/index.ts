@@ -7,7 +7,9 @@ import authImg from "../../public/auth.png";
 import scraperImg from "../../public/scraper.png";
 import portfolioImg from "../../public/portfolio.png";
 import railmadadImg from "../../public/railmadad.png";
+import cribeImg from "../../public/Cribein.png";
 import flask from "../../public/flask.png";
+import { url } from "inspector";
 
 export const projectList = [
   {
@@ -34,6 +36,7 @@ export const projectList = [
   {
     id: 2,
     title: "AI Agents Portal",
+    tag: "top",
     category: "AI",
     image: agentsPortalImg,
     description:
@@ -73,8 +76,29 @@ export const projectList = [
       "Analytics dashboard to track user queries",
     ],
   },
-  {
+    {
     id: 4,
+    title: "Cribe.in - Ecommerce Platform(Sold)",
+    tag: "top",
+    category: "frontend",
+    image: cribeImg,
+    description:
+      "Sold an E-commerce platform for buying and selling products with a user-friendly interface and secure payment options.",
+    tech: [
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
+    ],
+    url: "https://www.cribe.in/",
+    features: [
+      "User-friendly interface for buyers and sellers",
+      "Secure payment gateway integration",
+      "Admin dashboard for managing products and orders",
+    ],
+  },
+  {
+    id: 5,
     title: "AI-Powered Test Paper Generator",
     category: "AI",
     image: testGenImg,
@@ -93,7 +117,7 @@ export const projectList = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Authentication Services",
     category: "backend",
     image: authImg,
@@ -111,7 +135,7 @@ export const projectList = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "AI Powered Web Scraper",
     category: "backend",
     image: scraperImg,
@@ -129,7 +153,7 @@ export const projectList = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Personal Portfolio",
     category: "frontend",
     image: portfolioImg,
@@ -144,7 +168,7 @@ export const projectList = [
     features: ["Responsive design", "Smooth animations", "Easy to maintain"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Rail-Madad-SIH-Backend",
     category: "AI",
     image: railmadadImg,
