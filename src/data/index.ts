@@ -47,8 +47,8 @@ export const projectList = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
     ],
-    url: "http://65.2.39.20:3001/",
-    github: "undefined",
+    url: "https://agents.tryzent.com/",
+    github: "https://agents.tryzent.com/",
     features: [
       "Run multiple agents in parallel",
       "Credit/token-based usage system",
