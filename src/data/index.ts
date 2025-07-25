@@ -290,25 +290,17 @@ export const skills = [
 ];
 export const socials = [
   {
-    id: 1,
-    name: "Twitter",
-    username: "Siddanth6365",
-    url: "https://x.com/Siddanth6365",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg",
-  },
-  {
     id: 2,
     name: "Github",
     username: "laksii-fr",
-    url: "https://github.com/siddanth-6365",
+    url: "https://github.com/Laksii-fr",
     image:
       "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
   },
   {
     id: 3,
     name: "LinkedIn",
-    username: "siddanth-reddy",
+    username: "Lakshay-sharma2653",
     url: "https://www.linkedin.com/in/lakshay-sharma2653/",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg",
@@ -319,7 +311,7 @@ export const WorkExpcontents = [
   {
     title: "AI/ML Developer & Full Stack Intern",
     company: "Tryzentt Pvt. Ltd.",
-    date: "Jun 2024 – Apr 2024",
+    date: "Jun 2024 – Present",
     description: [
       "Built and deployed 5+ production-grade REST APIs that automated repetitive workflows in client applications, resulting in a 40% reduction in manual backend tasks.",
       "Integrated OpenAI GPT-3.5 into internal tools to generate smart suggestions, improving automation accuracy by 35% and enabling faster decision-making for users.",
