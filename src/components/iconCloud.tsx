@@ -2,6 +2,7 @@ import IconCloud2 from "@/components/ui/icon-cloud";
 
 const slugs = [
   "python",
+  "nodejs",
   "cplusplus",
   "sql",
   "pandas",
