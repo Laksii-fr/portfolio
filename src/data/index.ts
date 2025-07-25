@@ -91,6 +91,7 @@ export const projectList = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
     ],
     url: "https://www.cribe.in/",
+    github: "undefined",
     features: [
       "User-friendly interface for buyers and sellers",
       "Secure payment gateway integration",
