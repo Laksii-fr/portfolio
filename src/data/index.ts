@@ -35,7 +35,7 @@ export const projectList = [
   },
   {
     id: 2,
-    title: "AI Agents Portal",
+    title: "AgentsHub - Tryzent",
     tag: "top",
     category: "AI",
     image: agentsPortalImg,
@@ -57,7 +57,7 @@ export const projectList = [
   },
   {
     id: 3,
-    title: "Tryzentt – No/Low Code Chatbot Builder",
+    title: "Tryzent – No/Low Code Chatbot Builder",
     tag: "top",
     category: "AI",
     image: tryzenttImg,
